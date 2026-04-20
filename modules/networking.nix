@@ -8,7 +8,7 @@
       allowedUDPPorts = [];
     };
     
-    hostName = "nixos-testing";
+    hostName = "fynns-NixOS";
     networkmanager.enable = true;
 
   };
