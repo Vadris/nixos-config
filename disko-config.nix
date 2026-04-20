@@ -6,7 +6,7 @@ let
 
   # Create subvolume for every user configured
   # TODO: Also create subvolumes for .cache, .local, .var, Applications, Downloads and snapshots
-  userSubvolumes = lib.mapAttrs' (username: userArgs:
+  userSubvolumes = lib.mapAttrs' (username: _:
     lib.nameValuePair "@home/${username}" {
       mountOptions = [ "compress=zstd" ];
     }
