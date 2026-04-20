@@ -7,7 +7,7 @@
       ./modules/boot.nix              # Boot Loader configuration
       ./modules/networking.nix        # Network configuration
       ./modules/locale.nix
-      ./modules/packages.nix
+      ./modules/system-packages.nix
     ];
 
   # nVidia driver
