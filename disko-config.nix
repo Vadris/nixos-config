@@ -54,7 +54,7 @@
                   };
                   
                   # Snapshots
-                  "@snapshots" {
+                  "@snapshots" = {
                     mountOptions = [ "compress=zstd" ];
                     mountpoint = "/.snapshots";                    
                   };
@@ -63,10 +63,17 @@
                   "@nix" = {
                     mountOptions = [ "compress=zstd" ];
                     mountpoint = "/nix";
-                  }
+                  };
+
+                  # etc
+
+                  "@etc" = {
+                    mountOptions = [ "compress=zstd" ];
+                    mountpoint = "/etc";
+                  };
 
                   # Temp Files
-                  "@tmp" {
+                  "@tmp" = {
                     mountOptions = [ "compress=zstd" ];
                     mountPoint = "/tmp";
                   };
@@ -97,7 +104,7 @@
                   
                   # Homes
                   # Root user home
-                  "@root" {
+                  "@root" = {
                     mountOptions = [ "compress=zstd" ];
                     mountpoint = "/root"; 
                   };
