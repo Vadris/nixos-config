@@ -1,5 +1,21 @@
+{lib, ...}:
+
+let 
+  userConfig = import ./modules/user-config.nix;
+  accounts = userConfig.accounts;
+
+  # Create subvolume for every user configured
+  # TODO: Also create subvolumes for .cache, .local, .var, Applications, Downloads and snapshots
+  userSubvolumes = lib.mapAttrs' (username: userArgs:
+    lib.nameValuePair "@home/${username}" {
+      mountOptions = [ "compress=zstd" ];
+    }
+  ) accounts;
+
+
+in
 {
-  disko.devices = {
+  dis11ko.devices = {
     disk = {
       main = {
         type = "disk";
@@ -114,25 +130,9 @@
                     mountOptions = [ "compress=zstd" ];
                     mountpoint = "/home";
                   };
+                
                   
-                  # TODO: Somehow create subvolume for every user configured
-                  "@home/fynn" = { 
-                    mountOptions = [ "compress=zstd" ];
-                  };
-
-                  # .cache
-
-                  # .local
-
-                  # .var
-
-                  # Applications
-                  
-                  # Downloads
-
-                  # .snapshots
-                  
-                };
+                } // userSubvolumes;
 
                 mountpoint = "/";
               };
