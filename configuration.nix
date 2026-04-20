@@ -15,10 +15,6 @@
   # nVidia driver
   hardware.opengl.driSupport32Bit = true;
   hardware.bluetooth.enable = true;
-  # hardware.pulseaudio = {
-  #   enable = true;
-  #   package = pkgs.pulseaudioFull;
-  # };
 
   services = {
 
@@ -42,9 +38,6 @@
 
   # Don't blind me
   systemd.services.redshift.restartIfChanged = false;
-
-  # Users
-  
 
   fonts = {
     fontconfig.enable = true;
