@@ -6,8 +6,9 @@
       ./hardware-configuration.nix    # Include the results of the hardware scan.
       ./modules/boot.nix              # Boot Loader configuration
       ./modules/networking.nix        # Network configuration
-      ./modules/locale.nix
-      ./modules/system-packages.nix
+      ./modules/locale.nix            # Locale configuration
+      ./modules/hyprland.nix          # Hyprland configuration
+      ./modules/system-packages.nix   # System Packages
     ];
 
   # nVidia driver
