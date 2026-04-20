@@ -8,6 +8,7 @@
       ./modules/networking.nix        # Network configuration
       ./modules/locale.nix            # Locale configuration
       ./modules/hyprland.nix          # Hyprland configuration
+      ./modules/audio.nix             # Audio configuration
       ./modules/system-packages.nix   # System Packages
     ];
 
