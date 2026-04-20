@@ -31,4 +31,5 @@
     qpwgraph
     pavucontrolqt
   ];
+  
 }

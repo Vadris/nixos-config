@@ -1,6 +1,8 @@
 {lib, ...}:
 
 let 
+
+  attrConcatMap = {}
   userConfig = import ./modules/user-config.nix;
   accounts = userConfig.accounts;
 
