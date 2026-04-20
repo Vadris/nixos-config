@@ -9,17 +9,26 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
+    
     wireplumber.enable = true;
-    # If you want to use JACK applications, uncomment this
-    # jack.enable = true;
+    jack.enable = true;
 
-    # use the example session manager (no others are packaged yet so this is enabled by default,
-    # no need to redefine it in your config for now)
     # media-session.enable = true;
   };
 
+  # TODO: Create Virtual devices: 
+  #   Communication Audio Input   (Source) <- Comm Mic
+  #   Game Audio Input            (Source) <- Comm Mic
+  #   Communication Audio Output  (Sink)   -> CH 6 (Mono Sum) ; DEFUALT_SINK
+  #   Game Audio Output           (Sink)   -> CH7/8 ; DEFAULT_SINK
+  #   Media Audio Output          (Sink)   -> CH9/10 ; DEFAULT_SINK
+  #   System Audio Output         (Sink)   -> CH 9/10 ; DEFAULT_SINK
+  
+  # TODO: Hide unnused devices
+
+
   environment.systemPackages = with pkgs; [
-    pamixer
-    pavucontrol
+    qpwgraph
+    pavucontrolqt
   ];
 }
