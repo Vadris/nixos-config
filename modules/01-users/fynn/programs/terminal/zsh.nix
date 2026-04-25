@@ -1,5 +1,5 @@
 { self, inputs, ... }: {
-  flake.homeManagerModules.fynn.programms.zsh = { pkgs, lib, ... }: {
+  flake.homeModules.fynn.programms.zsh = { pkgs, lib, ... }: {
     programs.zsh = {
       enable = true;
       
@@ -10,7 +10,7 @@
       syntaxHighlighting.enable = true;
 
       shellAliases = {
-        soft-reboot = "systemctl soft-reboot"
+        soft-reboot = "systemctl soft-reboot";
       };
 
       plugins = [
@@ -18,5 +18,5 @@
       ];
 
     };
-  }
+  };
 }

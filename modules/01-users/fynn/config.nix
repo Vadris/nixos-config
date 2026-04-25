@@ -6,5 +6,5 @@
 
     groups = [ "wheel" ];
 
-  }
+  };
 }
