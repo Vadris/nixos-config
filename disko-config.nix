@@ -17,11 +17,11 @@ let
 
 in
 {
-  dis11ko.devices = {
+  disko.devices = {
     disk = {
       main = {
         type = "disk";
-        device = "/dev/disk/by-diskseq/1";
+        device = "/dev/<diskname>";
         content = {
           type = "gpt";
           partitions = {

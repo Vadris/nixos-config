@@ -11,6 +11,7 @@ pkgs.mkShellNoCC {
 
   packages = with pkgs; [
     
+    hello
     vim
 
   ];

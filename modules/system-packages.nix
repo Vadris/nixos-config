@@ -12,5 +12,6 @@
     [ 
       wget
       nano
+      kitty
     ];
 }

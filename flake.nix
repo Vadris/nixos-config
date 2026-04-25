@@ -1,18 +1,15 @@
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    disko.url = "github:nix-community/disko";
-    disko.inputs.nixpkgs.follows = "nixpkgs";
+    flake-parts.url = "github:hercules-ci/flake-parts";
   };
 
-  outputs = { self, nixpkgs, disko, ... }: {
-    nixosConfigurations.my-machine = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      modules = [
-        disko.nixosModules.disko
-        ./disko-config.nix
-        ./configuration.nix
-      ];
-    };
-  };
+  outputs = inputs @ {flake-parts, ...}:
+    flake-parts.mkFlake { inherit inputs; }
+    {
+      systems = [ "x86_64-linux" ];
+      perSystem = { pkgs, ... }: {
+        
+      }
+    }
 }
