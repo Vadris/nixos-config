@@ -1,14 +1,15 @@
 { self, inputs, ... }:
 {
-  flake.diskoConfigurations.btrfsEfi = { pkgs, lib, disk, ... }: 
+  flake.diskoConfigurations.btrfsEfi = { pkgs, lib, ... }: 
   let 
+    # TODO: Create subvolumes for all users in active config
     userSubvolumes = {};
   in {
     disko.devices = {
       disk = {
-        main = {
+        nixos = {
           type = "disk";
-          device = disk;
+          device = "/dev/null"; # Will be overwritten by installer
           content = {
             type = "gpt";
             partitions = {
