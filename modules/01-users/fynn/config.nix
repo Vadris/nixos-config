@@ -4,7 +4,8 @@
     fristname = "Fynn";
     lastname = "Jansen";
 
-    groups = [ "wheel" ];
+    groups = [ "wheel" "networkmanager" ];
 
+    
   };
 }
