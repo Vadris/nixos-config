@@ -20,18 +20,17 @@
     # Import Tree
     import-tree.url = "github:vic/import-tree";
 
-    # Flake Schemas
+    # Flake Schemas (currently unused<q)
     flake-schemas.url = "github:DeterminateSystems/flake-schemas";
 
   };
 
-  outputs = { flake-parts, flake-schemas, ... } @ inputs: flake-parts.lib.mkFlake 
-    { inherit inputs; }
-    (inputs.import-tree ./modules) // {
-      schemas = flake-schemas.schemas;
-      imports = [
-        inputs.home-manager.flakeModules.home-manager
-        inputs.disko.flakeModules.default
-      ];
-    };
+  outputs = { flake-parts, flake-schemas, ... } @ inputs: flake-parts.lib.mkFlake { inherit inputs; } {
+    # flake.schemas = flake-schemas.schemas;
+    imports = [
+      inputs.home-manager.flakeModules.home-manager
+      inputs.disko.flakeModules.default
+      (inputs.import-tree ./modules)
+    ];
+  };
 }

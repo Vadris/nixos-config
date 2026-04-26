@@ -1,5 +1,5 @@
 { self, inputs, ... }: {
-  flake.derivatives.a = { pkgs, lib, config, ... }: {
-      
+  flake.packages.waterfox = derivation {
+
   };
 }
