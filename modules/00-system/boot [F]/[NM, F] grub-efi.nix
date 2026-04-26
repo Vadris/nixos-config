@@ -7,7 +7,8 @@
     };
 
     boot.loader.efi.canTouchEfiVariables = true;
-
+    
+    # TODO: Set this though an option
     boot.supportedFilesystems = [
       "exfat"
       "btrfs"
