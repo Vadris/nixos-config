@@ -17,14 +17,18 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     
+    # CachyOS Kernel
+    nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
+    nix-cachyos-kernel.inputs.nixpkgs.follows = "nixpkgs";
+    
+    # waterfox, TODO: do this myself
+    waterfox.url = "github:Hythera/nix-waterfox";
+
     # Import Tree
     import-tree.url = "github:vic/import-tree";
 
     # Flake Schemas (currently unused<q)
     flake-schemas.url = "github:DeterminateSystems/flake-schemas";
-    
-    # waterfox, TODO: do this myself
-    waterfox.url = "github:Hythera/nix-waterfox";
 
   };
 
