@@ -3,10 +3,10 @@ let
   hostName = "fynns-framework13";
   hostNameModule = { pkgs, ... }: { networking.hostname = hostName; };
 in {
-  flake.nixosConfigurations."${hostname}" = inputs.nixpkgs.lib.nixosSystem {
+  flake.nixosConfigurations."${hostName}" = inputs.nixpkgs.lib.nixosSystem {
     
     modules = [
-      hostnameModule
+      hostNameModule
       # Disk Configuration
       self.diskoConfigurations.btrfsEfi
       # System Configuration
