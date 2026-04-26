@@ -1,5 +1,5 @@
 { inputs, self, ... }: {
-  flake.nixosModules.kernels.realtime = { pkgs, lib, ... }: {
+  flake.nixosModules.kernels.linux-realtime = { pkgs, lib, ... }: {
     
   };
 }

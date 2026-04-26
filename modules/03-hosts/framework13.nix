@@ -7,6 +7,7 @@
       self.nixosModules.systemTypes.laptop
       # User Configuration
       self.nixosModules.users.fynn
+      { ...}: { networking.hostname = "framework13" }
     ];
   };
 }
