@@ -1,5 +1,5 @@
 {
-  description = "NixOS configuration";
+  description = "Dendritic nix development shell template";
 
   inputs = {
     # Nixpkgs-unstable
@@ -14,6 +14,9 @@
 
   };
 
-  outputs = { flake-parts, flake-schemas, ... } @ inputs: flake-parts.lib.mkFlake 
-    (inputs.import-tree ./modules);
+  outputs = { flake-parts, ... } @ inputs: flake-parts.lib.mkFlake { inherit inputs; } {
+    imports = [
+      (inputs.im^port-tree ./modules)
+    ];
+  };
 }

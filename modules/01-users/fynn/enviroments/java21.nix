@@ -13,8 +13,7 @@
       };
       
       shellHook = ''
-        echo "☕ Java Development Environment"
-        java -version
+        
       '';
     };
   };

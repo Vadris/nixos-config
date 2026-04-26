@@ -22,6 +22,9 @@
 
     # Flake Schemas (currently unused<q)
     flake-schemas.url = "github:DeterminateSystems/flake-schemas";
+    
+    # waterfox, TODO: do this myself
+    waterfox.url = "github:Hythera/nix-waterfox";
 
   };
 
