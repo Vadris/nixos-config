@@ -14,6 +14,20 @@
     
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+    nix = {
+      package = pkgs.nixUnstable;
+      trustedBinaryCaches = [
+        "http://cache.nixos.org"
+      ];
+
+      binaryCaches = [
+        "http://cache.nixos.org"
+      ];
+
+      gc.automatic = false;
+      maxJobs = pkgs.stdenv.lib.mkForce 6;
+    };
+
     options = {};
   
     config = {};
