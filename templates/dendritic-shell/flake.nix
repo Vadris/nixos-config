@@ -14,13 +14,6 @@
 
   };
 
-  outputs = { flake-parts, flake-schemas, ... } @ inputs: flake-parts.lib.mkFlake { inherit inputs; } {
-    # flake.schemas = flake-schemas.schemas;
-    imports = [
-      inputs.home-manager.flakeModules.home-manager
-      inputs.disko.flakeModules.default
-      (inputs.import-tree ./modules)
-      
-    ];
-  };
+  outputs = { flake-parts, flake-schemas, ... } @ inputs: flake-parts.lib.mkFlake 
+    (inputs.import-tree ./modules);
 }
