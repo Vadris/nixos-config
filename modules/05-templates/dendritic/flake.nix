@@ -41,5 +41,5 @@ in {
         (inputs.import-tree ./modules)
       ];
     };
-  }
+  };
 }
