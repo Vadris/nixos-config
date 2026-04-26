@@ -10,7 +10,7 @@
   nix.settings.experimental-features = [ "nix-command"] 
 
   # nVidia driver
-  hardware.opengl.driSupport32Bit = true;
+  
   hardware.bluetooth.enable = true;
 
   services = {
