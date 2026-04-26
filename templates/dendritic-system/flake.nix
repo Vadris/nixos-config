@@ -1,5 +1,5 @@
 {
-  description = "NixOS configuration";
+  description = "NixOS configuration using the dendritic pattern + home-manager & disko";
 
   inputs = {
     # Nixpkgs-unstable
