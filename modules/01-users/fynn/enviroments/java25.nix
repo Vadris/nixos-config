@@ -1,15 +1,17 @@
 { self, inputs, ... }: {
   perSystem = {pkgs, config, ...}: {
-    devShells.java-latest = pkgs.mkShell {
+    
+    devShells.java25 = pkgs.mkShell {
       packages = with pkgs; [
-        jdk25        # The latest General Availability release
-        gradle       # Or gradle, ant, etc.
+        jdk25        
+        gradle       
+        maven
         jdt-language-server
       ];
       env = {
-        JAVA_HOME = pkgs.jdk26.home;
+        JAVA_HOME = pkgs.jdk25.home;
       };
-      # 3. Automation on entry
+      
       shellHook = ''
         echo "☕ Java Development Environment"
         java -version
