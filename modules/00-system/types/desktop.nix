@@ -2,9 +2,9 @@
 {
   flake.nixosModules.systemTypes.desktop = { pkgs, lib, ... }: {
     imports = [
-      self.nixosModules.systemTypes.base
+      self.nixosModules.systemTypes
     ];
-
+    
     options = {};
   
     config = {};
