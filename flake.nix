@@ -34,9 +34,6 @@
     ];
 
     # TODO: Find a way to do this using a dendritic pattern
-    flake.templates.dendritic = {
-      path = ./templates/dendritic;
-      description = "Dendritic pattern template using flake-parts";
-    };
+    
   };
 }

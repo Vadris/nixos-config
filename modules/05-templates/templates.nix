@@ -1,4 +1,4 @@
-{}: let 
+{ self, inputs, ... }: let 
 
 in {
   flake.templates.default = self.templates.dendritic;
