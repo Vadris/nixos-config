@@ -31,9 +31,10 @@
       inputs.home-manager.flakeModules.home-manager
       inputs.disko.flakeModules.default
       (inputs.import-tree ./modules)
+      # TODO: Find a way to do this using a dendritic pattern
+      ./templates/templates.nix
     ];
 
-    # TODO: Find a way to do this using a dendritic pattern
     
   };
 }
