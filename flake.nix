@@ -27,7 +27,7 @@
     # Import Tree
     import-tree.url = "github:vic/import-tree";
 
-    # Flake Schemas (currently unused<q)
+    # Flake Schemas (currently unused)
     flake-schemas.url = "github:DeterminateSystems/flake-schemas";
 
   };
