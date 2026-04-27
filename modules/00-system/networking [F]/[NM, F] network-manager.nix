@@ -1,5 +1,9 @@
-{ self, inputs, ... }: {
-  flake.nixosModules.networkManager = { lib, pkgs, config, ... }: {
+{ self, inputs, ... }: let
+  
+in {
+  flake.nixosModules.networkManager = { lib, pkgs, config, ... }: let
+  
+  in{
     networking.networkmanager = {
       enable = true;
       

@@ -1,5 +1,6 @@
-{ self, inputs, ... }:
-{
+{ self, inputs, ... }: let
+  
+in {
   flake.diskoConfigurations.btrfsEfi = { pkgs, lib, ... }: 
   let 
     # TODO: Create subvolumes for all users in active config

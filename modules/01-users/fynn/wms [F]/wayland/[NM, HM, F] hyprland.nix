@@ -1,5 +1,9 @@
-{ self, inputs, ... }: {
-  flake.nixosModules.hyprland-uswm = { pkgs, lib, config, }: {
+{ self, inputs, ... }: let 
+
+in  {
+  flake.nixosModules.hyprland-uswm = { pkgs, lib, config, }: let
+    
+  in {
     programs.hyprland = {
       enable = true;
       xwayland.enable = true;
@@ -7,7 +11,9 @@
     };
   };
   
-  flake.homeModules.fynn-hyprland = { pkgs, lib, config, ...}: {
+  flake.homeModules.fynn-hyprland = { pkgs, lib, config, ...}: let
+    
+  in {
     wayland.windowManager.hyprland.enable = true;
   };
 }

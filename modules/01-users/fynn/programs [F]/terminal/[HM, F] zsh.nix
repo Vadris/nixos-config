@@ -1,5 +1,9 @@
-{ self, inputs, ... }: {
-  flake.homeModules.fynn-zsh = { pkgs, lib, ... }: {
+{ self, inputs, ... }: let 
+
+in {
+  flake.homeModules.fynn-zsh = { pkgs, lib, ... }: let 
+    
+  in {
     programs.zsh = {
       enable = true;
       

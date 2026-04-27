@@ -1,6 +1,9 @@
-{ self, inputs, ... }:
-{
-  flake.nixosModules.system-base = { pkgs, lib, ... }: {
+{ self, inputs, ... }: let
+
+in {
+  flake.nixosModules.system-base = { pkgs, lib, ... }: let
+    
+  in {
     imports = [
       /etc/nixos/hardware-configuration.nix # Needs to be commented on non nixos systems, when checking the flake
       self.nixosModules.grub-efi
