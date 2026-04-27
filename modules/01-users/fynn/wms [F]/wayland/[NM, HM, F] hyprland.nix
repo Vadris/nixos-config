@@ -1,15 +1,24 @@
 { self, inputs, ... }: let 
 
 in  {
-  flake.nixosModules.hyprland-uswm = { pkgs, lib, config, }: let
+  flake.nixosModules.hyprland = { pkgs, lib, config, }: let
     
   in {
     programs.hyprland = {
       enable = true;
       xwayland.enable = true;
-      withUWSM = true;
     };
   };
+
+  flake.nixosModules.hyprland-uwsm = { pkgs, lib, config, }: let
+    
+  in {
+    imports = [
+      self.nixosModules.hyprland
+    ];
+    programs.hyprland.withUWSM = true;
+  };
+  
   
   flake.homeModules.fynn-hyprland = { pkgs, lib, config, ...}: let
     
