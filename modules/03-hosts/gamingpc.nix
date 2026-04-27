@@ -4,6 +4,7 @@ let
   hostNameModule = { pkgs, ... }: { networking.hostName = hostName; };
 in {
   flake.nixosConfigurations."${hostName}"= inputs.nixpkgs.lib.nixosSystem {
+    system = "x86_64-linux";
     modules = [
       # hostNameModule
       self.diskoConfigurations.btrfsEfi

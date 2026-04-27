@@ -2,7 +2,7 @@
 {
   flake.nixosModules.system-base = { pkgs, lib, ... }: {
     imports = [
-      # /etc/nixos/hardware-configuration.nix
+      /etc/nixos/hardware-configuration.nix # Needs to be commented on non nixos systems, when checking the flake
       self.nixosModules.grub-efi
       self.nixosModules.kernel-linux-latest
       self.nixosModules.firewall
