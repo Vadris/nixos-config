@@ -1,7 +1,7 @@
 { self, inputs, ... }: let 
   
 in {
-  flake.nixosModules.sudo = { pkgs, lib, config, ...}: let
+  flake.nixosModules.qt6ct-kde = { pkgs, lib, config, ...}: let
     
   in {
     environment.systemPackages = with pkgs; [
