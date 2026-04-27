@@ -1,5 +1,5 @@
 { self, inputs, ... }: {
-  flake.homeModules.fynn.programs.kitty = { pkgs, lib, config, ... }: {
+  flake.homeModules.fynn-kitty = { pkgs, lib, config, ... }: {
     programs.kitty = {
       enable = true;
       

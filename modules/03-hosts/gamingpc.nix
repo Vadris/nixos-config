@@ -7,8 +7,8 @@ in {
     modules = [
       hostNameModule
       self.diskoConfigurations.btrfsEfi
-      self.nixosModules.systemTypes.desktop
-      self.nixosModules.nvidia
+      self.nixosModules.system-desktop
+      # self.nixosModules.nvidia
     ];
   };
 }

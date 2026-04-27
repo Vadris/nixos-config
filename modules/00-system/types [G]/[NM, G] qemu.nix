@@ -1,8 +1,8 @@
 { self, inputs, ... }:
 {
-  flake.nixosModules.systemTypes.qemu = { pkgs, lib, ... }: {
+  flake.nixosModules.system-qemu = { pkgs, lib, ... }: {
     imports = [
-      self.nixosModules.systemTypes.base
+      self.nixosModules.system-base
     ];
 
     options = {};

@@ -43,7 +43,7 @@
 
 
               # Root Partition
-              root = {
+              nixos = {
                 size = "100%";
                 content = {
                   type = "btrfs";

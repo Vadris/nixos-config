@@ -1,5 +1,5 @@
 { self, inputs, ... }: {
-  flake.nixosModules.networking.ssh = { pkgs, lib, config, ...}: {
+  flake.nixosModules.openssh = { pkgs, lib, config, ...}: {
     services.openssh.enable = true;
   };
 }

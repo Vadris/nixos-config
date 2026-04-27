@@ -1,5 +1,5 @@
 { self, inputs, ... }: {
-  flake.nixosModules.networking.ntp = { pkgs, lib, config, ...}: {
+  flake.nixosModules.ntp = { pkgs, lib, config, ...}: {
     services.ntp.enable = true;
   };
 }

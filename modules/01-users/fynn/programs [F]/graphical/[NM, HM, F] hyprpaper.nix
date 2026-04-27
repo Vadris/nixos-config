@@ -1,7 +1,7 @@
 { self, inputs, ... }: let 
 
 in {
-  flake.nixosModules.programs.hyprpaper = { pkgs, ...}: {
+  flake.nixosModules.hyprpaper = { pkgs, ...}: {
     enviroment.systemPackages = [
       pkgs.hyprpaper
     ];

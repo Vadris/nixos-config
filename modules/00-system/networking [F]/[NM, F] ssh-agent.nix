@@ -1,5 +1,5 @@
 { self, inputs, ... }: {
-  flake.nixosModules.networking.ssh-agent = { pkgs, lib, config, ...}: {
+  flake.nixosModules.ssh-agent = { pkgs, lib, config, ...}: {
     programs.ssh.startAgent = true;
   };
 }

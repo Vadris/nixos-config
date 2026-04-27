@@ -1,6 +1,6 @@
 { self, inputs, ... }:
 {
-  flake.nixosModules.systemTypes.base = { pkgs, lib, ... }: {
+  flake.nixosModules.system-base = { pkgs, lib, ... }: {
     imports = [
       /etc/nixos/hardware-configuration.nix
       self.nixosModules.boot.grub-efi

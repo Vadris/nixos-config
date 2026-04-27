@@ -1,7 +1,7 @@
 { self, inputs, ...}: let 
 
 in {
-  flake.homeModules.fynn.dolphin = { pkgs, ... }: let
+  flake.homeModules.fynn-dolphin = { pkgs, ... }: let
     
     in {
     homeModules.fynn.dolphin = {

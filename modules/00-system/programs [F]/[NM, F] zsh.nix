@@ -1,5 +1,5 @@
 { self, inputs, ... }: {
-  flake.nixosModules.programs.zsh = { pkgs, lib, config, ...}: {
+  flake.nixosModules.zsh = { pkgs, lib, config, ...}: {
     programs.zsh = {
       enable = true;
       enableCompletion = true;

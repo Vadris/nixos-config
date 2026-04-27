@@ -10,9 +10,9 @@ in {
       # Disk Configuration
       self.diskoConfigurations.btrfsEfi
       # System Configuration
-      self.nixosModules.systemTypes.laptop
+      self.nixosModules.system-laptop
       # User Configuration
-      self.nixosModules.users.fynn
+      # self.nixosModules.users.fynn
       
     ];
   };

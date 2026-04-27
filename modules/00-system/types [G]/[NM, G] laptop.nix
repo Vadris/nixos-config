@@ -1,8 +1,8 @@
 { self, inputs, ... }:
 {
-  flake.nixosModules.systemTypes.laptop = { pkgs, lib, ... }: {
+  flake.nixosModules.system-laptop = { pkgs, lib, ... }: {
     imports = [
-      self.nixosModules.systemTypes.base
+      self.nixosModules.system-base
     ];
 
     options = {};
