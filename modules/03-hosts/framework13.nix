@@ -1,10 +1,10 @@
 { self, inputs, ... }:
 let 
   hostName = "fynns-framework13";
-  hostNameModule = { pkgs, ... }: { networking.hostname = hostName; };
+  hostNameModule = { pkgs, ... }: { networking.hostName = hostName; };
 in {
   flake.nixosConfigurations."${hostName}" = inputs.nixpkgs.lib.nixosSystem {
-    
+    system = "x86_64-linux";
     modules = [
       hostNameModule
       # Disk Configuration

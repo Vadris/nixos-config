@@ -1,11 +1,11 @@
 { self, inputs, ... }:
 let
   hostName = "fynns-gamingpc";
-  hostNameModule = { pkgs, ... }: { networking.hostname = hostName; };
+  hostNameModule = { pkgs, ... }: { networking.hostName = hostName; };
 in {
   flake.nixosConfigurations."${hostName}"= inputs.nixpkgs.lib.nixosSystem {
     modules = [
-      hostNameModule
+      # hostNameModule
       self.diskoConfigurations.btrfsEfi
       self.nixosModules.system-desktop
       # self.nixosModules.nvidia

@@ -5,6 +5,10 @@
     # TODO: Create subvolumes for all users in active config
     userSubvolumes = {};
   in {
+    imports = [
+      inputs.disko.nixosModules.disko
+    ];
+
     disko.devices = {
       disk = {
         nixos = {
@@ -81,7 +85,7 @@
                     # Temp Files
                     "@tmp" = {
                       mountOptions = [ "compress=zstd" ];
-                      mountPoint = "/tmp";
+                      mountpoint = "/tmp";
                     };
 
                     # Var

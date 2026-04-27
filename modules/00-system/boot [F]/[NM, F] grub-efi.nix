@@ -1,5 +1,5 @@
 { self, inputs, ... }: {
-  flake.nixosModules.grubEfi = { pkgs, lib, ... }: {
+  flake.nixosModules.grub-efi = { pkgs, lib, ... }: {
     boot.loader.grub = {
       enable = true;
       efiSupport = true;
