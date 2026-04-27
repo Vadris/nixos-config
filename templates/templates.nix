@@ -1,10 +1,14 @@
 { self, inputs, ... }: let 
 
 in {
-  flake.templates.default = self.templates.dendritic;
+  flake.templates.default = self.templates.dendritic-system;
   
-  flake.templates.dendritic = {
-      path = ./dendritic;
-      description = "Dendritic pattern template using flake-parts";
+  flake.templates.dendritic-system = {
+      path = ./dendritic-system;
+      description = "Dendritic pattern system config template";
+  };
+  flake.templates.dendritic-shell = {
+      path = ./dendritic-shell;
+      description = "Dendritic pattern dev shell template";
   };
 }
