@@ -26,14 +26,9 @@
 
     # Import Tree
     import-tree.url = "github:vic/import-tree";
-
-    # Flake Schemas (currently unused)
-    flake-schemas.url = "github:DeterminateSystems/flake-schemas";
-
   };
 
-  outputs = { flake-parts, flake-schemas, ... } @ inputs: flake-parts.lib.mkFlake { inherit inputs; } {
-    # flake.schemas = flake-schemas.schemas;
+  outputs = { flake-parts, ... } @ inputs: flake-parts.lib.mkFlake { inherit inputs; } {
     imports = [
       inputs.home-manager.flakeModules.home-manager
       inputs.disko.flakeModules.default
@@ -41,7 +36,5 @@
       # TODO: Find a way to do this using a dendritic pattern
       ./templates/templates.nix
     ];
-
-    
   };
 }
