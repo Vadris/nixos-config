@@ -5,12 +5,12 @@ in {
     inherit (lib) mkOption types;
   in {
     options.keymaps = mkOption {
-      type = types.listOF (types.submodule {
+      type = types.listOf (types.submodule {
         
       });
       default = [ 
          
       ];
-    }   
+    };
   };
 }
