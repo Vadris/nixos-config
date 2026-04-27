@@ -3,13 +3,7 @@
 {
   imports =
     [ 
-      ./hardware-configuration.nix    # Include the results of the hardware scan.
-      ./modules/boot.nix              # Boot Loader configuration
-      ./modules/networking.nix        # Network configuration
-      ./modules/locale.nix            # Locale configuration
-      ./modules/hyprland.nix          # Hyprland configuration
-      ./modules/audio.nix             # Audio configuration
-      ./modules/system-packages.nix   # System Packages
+      /etc/nixos/hardware-configuration.nix    # Include the results of the hardware scan.
     ];
 
   # Enable flakes
