@@ -15,6 +15,8 @@ in {
       self.nixosModules.zsh
       self.nixosModules.sudo
     ];
+
+    nix.registry.system.flake = self;
     
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
