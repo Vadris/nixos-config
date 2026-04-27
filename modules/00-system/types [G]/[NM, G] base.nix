@@ -5,7 +5,7 @@ in {
     
   in {
     imports = [
-      /etc/nixos/hardware-configuration.nix # Needs to be commented on non nixos systems, when checking the flake
+      # /etc/nixos/hardware-configuration.nix # Needs to be commented on non nixos systems, when checking the flake
       self.nixosModules.grub-efi
       self.nixosModules.kernel-linux-latest
       self.nixosModules.firewall
@@ -34,6 +34,6 @@ in {
     };
 
     # Temporary workaround to get the flake to pass checking without a hrdware config
-    # nixpkgs.hostPlatform = "x86_64-linux";
+    nixpkgs.hostPlatform = "x86_64-linux";
   };  
 }
