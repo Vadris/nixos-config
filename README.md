@@ -1,5 +1,5 @@
 # NixOS Configuration
-My dendritic NixOS configuration using flake-part modules, Home Manager and disko.
+My dendritic NixOS configuration using [flake-parts](https://github.com/hercules-ci/flake-parts) modules, [Home Manager](https://github.com/nix-community/home-manager) and [disko](https://github.com/nix-community/disko).
 
 ## Start with Template
 
