@@ -7,5 +7,5 @@ in {
     enviroment.systemPackages = [
       pkgs.vim
     ];
-  }
+  };
 }
