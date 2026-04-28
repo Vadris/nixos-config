@@ -1,7 +1,7 @@
 { self, inputs, ... }: let
 
 in {
-  flake.homeModules.themeOption = { pkgs, lib, config, ... }: let
+  flake.homeModules.theme = { pkgs, lib, config, ... }: let
     inherit (lib) types mkOption;
     # Color Option
     mkRGBAOption = mkOption {
