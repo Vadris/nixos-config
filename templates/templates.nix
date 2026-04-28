@@ -11,4 +11,8 @@ in {
       path = ./dendritic-shell;
       description = "Dendritic pattern dev shell template";
   };
+  flake.templates.blank = {
+      path = ./dblank;
+      description = "Dendritic pattern dev shell template";
+  };
 }
