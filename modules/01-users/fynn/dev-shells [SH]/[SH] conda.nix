@@ -1,7 +1,7 @@
 { self, inputs, ... }: {
   perSystem = {pkgs, config, ...}: {
     
-    devShells.python3 = pkgs.mkShell {
+    devShells.conda = pkgs.mkShell {
       # Packages in enviroment
       packages = with pkgs; [
         conda
