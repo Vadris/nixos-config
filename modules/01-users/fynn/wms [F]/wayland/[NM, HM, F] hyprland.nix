@@ -1,7 +1,7 @@
 { self, inputs, ... }: let 
 
 in  {
-  flake.nixosModules.hyprland = { pkgs, lib, config, }: let
+  flake.nixosModules.hyprland = { pkgs, lib, config, ... }: let
     
   in {
     programs.hyprland = {
@@ -10,7 +10,7 @@ in  {
     };
   };
 
-  flake.nixosModules.hyprland-uwsm = { pkgs, lib, config, }: let
+  flake.nixosModules.hyprland-uwsm = { pkgs, lib, config, ... }: let
     
   in {
     imports = [
