@@ -1,6 +1,6 @@
 { self, inputs, ...} :
 {
-  flake.homeConfiguration.fynn = inputs.home-manager.lib.homeManagerConfiguration {
+  flake.homeConfigurations.fynn = inputs.home-manager.lib.homeManagerConfiguration {
     modules = [
       
     ];
