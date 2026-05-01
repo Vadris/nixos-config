@@ -9,5 +9,5 @@
     programs.thunderbird = {
       enable = true;
     };
-  }
+  };
 }
