@@ -20,7 +20,12 @@ in {
         splash = false;
         # TODO: Map wallpapers from theme config
         wallpapers = [
-
+          {
+            # monitor = "${monitor}";
+            # path = "${path}";
+            fit_mode = "cover";
+            timeout = 180;
+          }
         ];
       };
     };
