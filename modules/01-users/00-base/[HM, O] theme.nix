@@ -156,7 +156,7 @@ in {
         # TODO: Give Resolutions instead of monitor names here, and select monitor names based on monitor config.
         wallpapers = mkOption { 
           type = types.listOf (types.submodule {
-            monitor = mkOption {^
+            monitor = mkOption {
               type = types.str;
             };
             fit_mode = mkOption {
