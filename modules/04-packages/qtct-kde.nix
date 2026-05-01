@@ -15,12 +15,12 @@ in {
     };
 
     # 2. Override the default packages to apply the KDE patches
-    qt5ct-kde = pkgs.qt5ct.overrideAttrs (old: {
+    qt5ct-kde = pkgs.libsForQt5.qt5ct.overrideAttrs (old: {
       pname = "qt5ct-kde";
       patches = (old.patches or []) ++ [ qt5Patch ];
     });
 
-    qt6ct-kde = pkgs.qt6ct.overrideAttrs (old: {
+    qt6ct-kde = pkgs.qt6Packages.qt6ct.overrideAttrs (old: {
       pname = "qt6ct-kde";
       patches = (old.patches or []) ++ [ qt6Patch ];
     });
