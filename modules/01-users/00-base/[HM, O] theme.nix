@@ -5,20 +5,53 @@ in {
     inherit (lib) types mkOption;
     # Color Option
     mkRGBAOption = mkOption {
-      type = types.str // {
-        check = (x: true);
+      type = types.submodule {
+        r = mkOption {
+          type = types.int // {
+            check = (x: 0 <= x && x <= 255);
+          };
+        };
+        g = mkOption {
+          type = types.int // {
+            check = (x: 0 <= x && x <= 255);
+          };
+        };
+        b = mkOption {
+          type = types.int // {
+            check = (x: 0 <= x && x <= 255);
+          };
+        };
+        a = mkOption {
+          type = types.int // {
+            check = (x: 0 <= x && x <= 255);
+          };
+        };
       };
       example = "#rrggbbaa";
     };
     mkRGBOption = mkOption {
-      type = types.str // {
-        check = (x: true);
+      type = types.submodule {
+        r = mkOption {
+          type = types.int // {
+            check = (x: 0 <= x && x <= 255);
+          };
+        };
+        g = mkOption {
+          type = types.int // {
+            check = (x: 0 <= x && x <= 255);
+          };
+        };
+        b = mkOption {
+          type = types.int // {
+            check = (x: 0 <= x && x <= 255);
+          };
+        };
       };
-      example = "#rrggbb";
+      example = "#rrggbbaa";
     };
   in {
-    options.themes = mkOption {
-      type = types.listOf (types.submodule {
+    options.theme = mkOption {
+      type = types.submodule {
         colors = mkOption {
           type = types.submodule {
             background = mkRGBAOption;
@@ -114,7 +147,7 @@ in {
           type = types.listOf types.path; 
         }; 
 
-      });
+      };
 
       default = [
 
