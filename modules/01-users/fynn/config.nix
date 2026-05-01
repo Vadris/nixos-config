@@ -1,11 +1,8 @@
 { self, inputs, ...} :
 {
-  flake.userAccounts.fynn = {
-    fristname = "Fynn";
-    lastname = "Jansen";
-
-    groups = [ "wheel" "networkmanager" ];
-
-    
-  };
+  flake.homeConfiguration.fynn = inputs.home-manager.lib.homeManagerConfiguration {
+    modules = [
+      
+    ];
+  }
 }
