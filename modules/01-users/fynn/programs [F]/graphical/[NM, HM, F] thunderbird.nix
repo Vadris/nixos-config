@@ -1,4 +1,4 @@
-{ self, inputs, ... }: {
+{ self, inputs, ... }: { 
   flake.nixosModules.thunderbird = { pkgs, ...}: {
     enviroment.systemPackages = [
       pkgs.thunderbird
@@ -9,4 +9,5 @@
     programs.thunderbird = {
       enable = true;
     };
+  }
 }
