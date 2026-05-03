@@ -9,7 +9,7 @@ in {
     ];
 
     xdg.portal.extraPortals = [
-      pkgs.xdg-desktop-kde
+      pkgs.xdg-desktop-portal-kde
     ];
   };
 }
