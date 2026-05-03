@@ -20,22 +20,25 @@ in {
     
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-    nix = {
+    nix.settings = {
       # package = pkgs.nixUnstable;
-      trustedBinaryCaches = [
+      substituters = [
         "http://cache.nixos.org"
       ];
 
-      binaryCaches = [
+      trusted-binaryCaches = [
         "http://cache.nixos.org"
       ];
 
-      gc.automatic = false;
       maxJobs = lib.mkForce 6;
 
     };
 
+    nix.gc.automatic = false;
+
     # Temporary workaround to get the flake to pass checking without a hrdware config
     nixpkgs.hostPlatform = "x86_64-linux";
+
+    system.stateVersion = "26.05";
   };  
 }
