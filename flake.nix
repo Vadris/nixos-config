@@ -40,6 +40,6 @@
       ./templates/templates.nix
     ];
 
-    nixpkgs.overlays = [ inputs.millennium.overlays.default ];
+    # nixpkgs.overlays = [ inputs.millennium.overlays.default ];
   };
 }
