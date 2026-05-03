@@ -21,6 +21,9 @@
     nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
     nix-cachyos-kernel.inputs.nixpkgs.follows = "nixpkgs";
     
+    # Millenium (Official Flake)
+    inputs.millennium.url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
+
     # waterfox, TODO: do this myself
     waterfox.url = "github:Hythera/nix-waterfox";
 
@@ -32,9 +35,11 @@
     imports = [
       inputs.home-manager.flakeModules.home-manager
       inputs.disko.flakeModules.default
+      
       (inputs.import-tree ./modules)
       # TODO: Find a way to do this using a dendritic pattern
       ./templates/templates.nix
     ];
+    nixpkgs.overlays = [ inputs.millennium.overlays.default ];
   };
 }
