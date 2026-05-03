@@ -8,7 +8,7 @@ in {
     modules = [
       hostNameModule
       # Disk Configuration
-      self.diskoConfigurations.btrfsEfi
+      self.diskoConfigurations.btrfs-efi
       # System Configuration
       self.nixosModules.system-laptop
       # User Configuration

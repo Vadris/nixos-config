@@ -7,7 +7,7 @@ in {
     system = "x86_64-linux";
     modules = [
       # hostNameModule
-      self.diskoConfigurations.btrfsEfi
+      self.diskoConfigurations.btrfs-efi
       self.nixosModules.system-desktop
       # self.nixosModules.nvidia
     ];

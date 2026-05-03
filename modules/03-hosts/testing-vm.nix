@@ -1,7 +1,7 @@
 { self, inputs, ... }:
 let
   hostName = "nix-texting-vm";
-  hostnameModule = { pkgs, ... }: { networking.hostname = hostName; };
+  hostnameModule = { pkgs, ... }: { networking.hostName = hostName; };
 in {
   flake.nixosConfigurations."${hostName}" = inputs.nixpkgs.lib.nixosSystem {
     modules = [
