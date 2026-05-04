@@ -6,9 +6,10 @@ in {
   flake.nixosConfigurations."${hostName}"= inputs.nixpkgs.lib.nixosSystem {
     system = "x86_64-linux";
     modules = [
-      # hostNameModule
+      hostNameModule
       self.diskoConfigurations.btrfs-efi
       self.nixosModules.system-desktop
+      self.nixosModules.zen4-optimizations
       # self.nixosModules.nvidia
     ];
   };
