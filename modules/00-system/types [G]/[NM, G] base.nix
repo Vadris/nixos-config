@@ -37,7 +37,7 @@ in {
     nix.gc.automatic = false;
 
     # Temporary workaround to get the flake to pass checking without a hrdware config
-    nixpkgs.hostPlatform = "x86_64-linux";
+    # nixpkgs.hostPlatform = "x86_64-linux";
 
     system.stateVersion = "26.05";
   };  

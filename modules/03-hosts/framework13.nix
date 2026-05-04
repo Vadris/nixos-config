@@ -13,6 +13,7 @@ in {
       self.nixosModules.system-laptop
       # User Configuration
       # self.nixosModules.users.fynn
+      self.nixosModules.zen4-optimizations
       
     ];
   };

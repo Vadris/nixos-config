@@ -5,7 +5,10 @@ in {
   flake.nixosModules.zen4-optimizations = { pkgs, lib, config, ...}: let 
   
   in {
-    nixpkgs.gcc.arch = "zenver4";
-    nixpkgs.gcc.tune = "zenver4";
-  } 
+    nixpkgs.hostPlatform = {
+      gcc.arch = "znver4";
+      gcc.tune = "znver4";
+      system = "x86_64-linux";
+    };
+  }; 
 }

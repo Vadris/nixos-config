@@ -8,6 +8,7 @@ in {
       hostnameModule
       self.diskoConfigurations.btrfs-efi
       self.nixosModules.system-desktop
+      self.nixosModules.zen4-optimizations
     ];
   };
 }
